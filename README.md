@@ -9,9 +9,9 @@ A simple lightbox for AlpineJS and Tailwind CSS projects.
 
 ### Prerequisites
 
-* [AlpineJS 3.x](https://alpinejs.dev/essentials/installation)
+* [AlpineJS](https://alpinejs.dev/essentials/installation) (3.x)
 * [AlpineJS Focus Plugin](https://alpinejs.dev/plugins/focus)
-* [Tailwind CSS](https://tailwindcss.com/docs/installation)
+* [Tailwind CSS](https://tailwindcss.com/docs/installation) (3.x, 4.x)
 
 ### Table of Contents
 
@@ -60,7 +60,14 @@ Alpine.start()
 
 #### Styles
 
-Make sure Tailwind can pick up the CSS classes by adding the lightbox HTML to your `tailwind.config.js`:
+Make sure Tailwind can pick up the CSS classes by adding the lightbox HTML to your CSS config:
+
+```css
+/* Relative path to node_modules */
+@source '../node_modules/alpine-tailwind-lightbox/src/template.html';
+```
+
+Or `tailwind.config.js` if you are using Tailwind 3.x:
 
 ```js
 module.exports = {
