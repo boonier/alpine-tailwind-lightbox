@@ -37,8 +37,8 @@
                 <template x-if="item.type === 'image' && item.loaded">
                     <img class="w-auto h-auto max-h-screen max-w-screen" :src="item.url" :alt="item.alt || ''">
                 </template>
-                <template x-if="item.type === 'embed' && $store.lightbox.show[group]?.id === item.id">>
-                    <div class="flex items-center w-full self-stretch max-w-[calc(80vh/0.5625)]">
+                <template x-if="item.type === 'embed'">>
+                    <div x-if="$store.lightbox.show[group]?.id === item.id" class="flex items-center w-full self-stretch max-w-[calc(80vh/0.5625)]">
                         <div class="relative w-full h-0 pb-[56.25%]">
                             <iframe
                                 class="absolute top-0 left-0 w-full h-full"
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </template>
-                <template x-if="item.type === 'video' && $store.lightbox.show[group]?.id === item.id">>
+                <template x-if="item.type === 'video'">>
                     <div class="flex items-center w-full self-stretch max-w-[calc(80vh/0.5625)]">
                         <div class="relative w-full h-0 pb-[56.25%]">
                             <video
