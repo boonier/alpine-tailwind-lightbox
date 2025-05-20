@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </template>
-                <template x-if="item.type === 'video'">>
+                <template x-if="$store.lightbox.show[group]?.id === item.id && item.type === 'video'">>
                     <div class="flex items-center w-full self-stretch max-w-[calc(80vh/0.5625)]">
                         <div class="relative w-full h-0 pb-[56.25%]">
                             <video
